@@ -70,13 +70,13 @@ public class Main {
 		Arrays.fill(distance, INF);
 		distance[0] = 0;
 		pq.add(new Vertex(0, 0));
-		while(true) {
+		while(!pq.isEmpty()) {
 			Vertex v = pq.poll();
 			if(visited[v.node]) continue;
 			visited[v.node] = true;
-			cnt++;
+//			cnt++;
 			cost += distance[v.node];			
-			if(cnt == V) break;
+//			if(cnt == V) break;
 			
 			for(Node n : graph[v.node]) {
 				if(!visited[n.node]) {
